@@ -1,0 +1,59 @@
+#завдання 1 і 2
+import math
+a = int(input('Введіть перше число: '))
+m = int(input('Введіть значення модулю: '))
+p=a%m
+print('Залишок від ділення:', p)
+
+#завдання 3
+import math
+a = int(input('Введіть перше число: '))
+m = int(input('Введіть значення модулю: '))
+b = int(input('Введіть степінь: '))
+p=(a**b)%m
+print('Залишок від ділення:', p)
+
+#завдання 4
+import math
+a = int(input('Введіть перше число:'))
+m = int(input('Введіть значення модулю:'))
+def NSD(a, m):
+    while (a%m !=0 and m%a !=0):
+        if a > m :
+            a = a % m
+        else:
+            m = m % a
+    return min(a, m)
+print('Найбільший спільний дільник чисел:' ,a, 'та' ,m, '=', NSD(a, m))
+n=NSD(a, m)
+if n==1:
+    f_m = (m-1)-1
+    x = (a**f_m)% m
+    print('Обернений елемент за модулем:', x)
+else:
+    print('НСД' ,a, 'та' ,m, 'має дорівнювати 1')
+
+
+#Завдання 5
+import math
+a = int(input('Введіть перше число:'))
+m = int(input('Введіть значення модулю:'))
+array = int(input('Введіть розмір масиву:'))
+
+numbers = [n for n in range(2, array+1) if n not in
+           [i for sub in [list(range(2 * n, mas+1, l)) for l in range(2, array // 2)]
+           for i in sub]]
+print('Прості числа з масиву:', numbers)
+
+
+
+
+
+
+
+
+
+
+
+
+
